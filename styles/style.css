@@ -1,0 +1,147 @@
+/* Default settings */
+/* import font cdn link */
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+/* variable declaration */
+:root {
+  /* colors */
+  --White: hsl(0, 0%, 100%);
+  --Light_gray: hsl(212, 45%, 89%);
+  --Grayish_blue: hsl(220, 15%, 55%);
+  --Dark_blue: hsl(218, 44%, 22%);
+
+  /* font size */
+  --fs-main: 15px;
+  /* font family */
+  --fs-main-font: "Outfit", sans-serif;
+}
+/* default settings */
+/* box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* reset weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+body {
+  font-family: var(--fs-main-font);
+  background-color: var(--Very_light_grayish_blue);
+  font-size: var(--fs-main);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of default settings */
+
+/* Main Styling */
+
+/* Desktop */
+/* body */
+body {
+  background-color: var(--Light_gray);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content */
+#qr_card {
+  background-color: var(--White);
+  border-radius: 15px;
+  width: 300px;
+  height: 450px;
+  margin: 100px auto;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* image */
+#qr_card_image {
+  border-radius: 15px;
+}
+/* texts */
+/* container */
+#qr_card_content {
+  width: 250px;
+  margin: 10px auto;
+}
+/* heading */
+#qr_card_content_heading {
+  font-family: var(--fs-main-font);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--Dark_blue);
+  text-align: center;
+  margin: 10px auto;
+}
+/* paragraph */
+#qr_card_content_paragraph {
+  font-family: var(--fs-main-font);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--Grayish_blue);
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* Media Query (mobile) */
+@media screen and (max-width: 375px) {
+  #qr_card {
+    height: 75vh;
+    width: 50vh;
+    margin: 10vh auto;
+    padding: 10px;
+  }
+
+  #qr_card_content_heading {
+    font-size: 20px;
+  }
+  #qr_card_content_paragraph {
+    font-size: 15px;
+  }
+}
+
+/* End of Main Styling */
